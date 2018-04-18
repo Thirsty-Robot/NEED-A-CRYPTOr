@@ -2,10 +2,8 @@ array_result = []
 result = ''
 alphabet = [ 'a','b','c','d', 'e', 'f','g','h','i','j',
     	'k','l','m','n','o','p','q','r','s','t','u',
-		'v','w','x','y','z'
+		'v','w','x','y','z', ' '
 		]
-
-characters = [' ']
 
 index = 0;
 
@@ -25,25 +23,3 @@ class Algorithm:
 		result = ''.join(array_result)
 		print ('\nResult: ' +result)
 		return result
-
-	def FileCrypt(self):
-		print ('\nFile content: ')
-
-		with open(self.to_crypt, 'r') as file:
-			for line in file:
-				for i in line:
-					i = alphabet.index(i)+13
-					if (i > 24):
-						i = i-26
-
-					array_result.append(alphabet[i])
-
-	def StringDecrypt(self):
-		self.to_crypt = self.to_crypt.lower()
-
-		for i in self.to_crypt:
-			i = alphabet.index(i)-13
-			array_result.append(alphabet[i])
-
-		result = ''.join(array_result)
-		print ('\nResult: '+result)
