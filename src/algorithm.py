@@ -23,3 +23,13 @@ class Algorithm:
 		result = ''.join(array_result)
 		print ('\nResult: ' +result)
 		return result
+
+	def StringDecrypt(self):
+		self.to_crypt = self.to_crypt.lower()
+
+		for i in self.to_crypt:
+			i = alphabet.index(i)-13
+			array_result.append(alphabet[i])
+
+		result = ''.join(array_result)
+		print ('\nResult: '+result)
